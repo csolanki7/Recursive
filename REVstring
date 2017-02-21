@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <conio.h>
+char* reverse(char *S)
+{
+static int i=0;
+static char rev[100];
+if(*S)
+{
+reverse(S+1);
+rev[i++] = *S;
+}
+return rev;
+}
+int main()
+{
+char Sname[100];
+char *rev;
+printf("Enter a student full name : ");
+gets(Sname);
+rev = reverse(Sname);
+printf("The reverse studnet name is :%s", rev);
+getch();
+}
