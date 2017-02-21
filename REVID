@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+int ID, reversed = 0, remainder;
+printf("Enter an StudnetID: ");
+scanf("%d", &ID);
+while(ID != 0)
+{
+remainder = ID%10;
+reversed = reversed*10 + remainder;
+ID /= 10;
+}
+printf("Reversed ID Number is = %d", reversed);
+return 0;
+}
